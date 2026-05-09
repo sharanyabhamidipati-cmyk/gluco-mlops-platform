@@ -345,30 +345,26 @@ kubectl port-forward -n monitoring svc/prometheus-grafana 3000:80
 
 ## Prometheus Target Health
 
-<img width="1918" height="987" alt="image" src="https://github.com/user-attachments/assets/1eff31ec-3be4-4c86-a1c4-59f1a910aa6a" />
-
+![Prometheus Targets](screenshots/prometheus-targets.png)
 
 ---
 
 ## Grafana Monitoring Dashboard
 
-<img width="1601" height="1020" alt="image" src="https://github.com/user-attachments/assets/f46c4c99-e822-4567-ac75-ed1a8ed7550a" />
-
+![Grafana Dashboard](screenshots/grafana-dashboard.png)
 
 ---
 
 ## Kubernetes Pods
 
-<img width="1906" height="993" alt="image" src="https://github.com/user-attachments/assets/5d2fedb1-0cc2-40e7-9788-3532cca0be09" />
-
+![Kubernetes Pods](screenshots/kubernetes-pods.png)
 
 
 ---
 
 ## GitHub Actions CI Success
 
-<img width="1888" height="950" alt="image" src="https://github.com/user-attachments/assets/bc4f0945-22d8-4f02-bed2-ad8272ab97e6" />
-
+![GitHub Actions](screenshots/github-actions-success.png)
 
 ---
 
