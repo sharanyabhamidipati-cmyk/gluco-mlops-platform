@@ -384,17 +384,22 @@ This project demonstrates:
 
 ---
 
-# Future Improvements
+# Remaining Work
 
-- AWS EKS deployment
-- Terraform infrastructure automation
-- Horizontal Pod Autoscaler (HPA)
-- Alertmanager integration
-- Slack/Email alerts
-- CD pipeline implementation
-- ML retraining pipeline
-- Model versioning
-- Canary deployment strategy
+The current version demonstrates the core end-to-end MLOps workflow with API serving, Kubernetes deployment, CI validation, Prometheus monitoring, and Grafana visualization.
+
+Planned enhancements:
+
+- MLflow integration for experiment tracking and model registry
+- AWS ECR integration for storing Docker images
+- AWS EKS deployment for managed Kubernetes
+- Helm charts for reusable Kubernetes packaging
+- Drift monitoring for tracking data/model behavior changes
+- Terraform/CloudFormation infrastructure automation
+- Advanced observability and logging using tools like Loki or CloudWatch
+- Rollback and blue-green deployment strategy explanation
+- Architecture diagram with CI/CD, Kubernetes, and monitoring flow
+- Final README polishing and interview-ready documentation
 
 ---
 
