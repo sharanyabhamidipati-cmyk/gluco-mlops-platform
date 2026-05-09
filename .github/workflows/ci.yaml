@@ -30,6 +30,10 @@ jobs:
         run: |
           python -m compileall app
 
+      - name: Train model for CI build
+        run: |
+          python app/train.py
+
       - name: Build Docker image
         run: |
           docker build -t gluco-mlops-api:ci -f docker/Dockerfile .
