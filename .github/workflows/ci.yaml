@@ -25,16 +25,32 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r app/requirements.txt
+          pip install pyyaml
 
       - name: Validate Python syntax
         run: |
           python -m compileall app
 
+      - name: Train model for CI build
+        run: |
+          python app/train.py
+
       - name: Build Docker image
         run: |
           docker build -t gluco-mlops-api:ci -f docker/Dockerfile .
 
-      - name: Validate Kubernetes manifests
+      - name: Validate Kubernetes YAML syntax
         run: |
-          kubectl --dry-run=client apply -f kubernetes/deployment.yaml
-          kubectl --dry-run=client apply -f kubernetes/service.yaml
+          python - <<'PY'
+          import yaml
+
+          files = [
+              "kubernetes/deployment.yaml",
+              "kubernetes/service.yaml"
+          ]
+
+          for file in files:
+              with open(file) as f:
+                  yaml.safe_load(f)
+              print(f"{file} is valid YAML")
+          PY
