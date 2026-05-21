@@ -49,7 +49,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t gluco-mlops-api:ci -f docker/Dockerfile .
+          docker build -t gluco-mlops-api:${{ github.sha }} -f docker/Dockerfile .
 
       - name: Validate Kubernetes YAML syntax
         run: |
